@@ -1,0 +1,31 @@
+body {
+  font-family: arial;
+}
+
+
+
+
+/* INICIO Styles del FOOTER */
+.footer_container{
+  border: solix, 1px, blue;
+  display : flex;
+  flex-wrap : wrap ;
+  padding: 10px;
+}
+.footer_seccion1{
+  display : inline-flex;
+  padding: 10px;
+}
+.footer_seccion2{
+display : inline-flex;
+padding: 10px;
+}
+.footer_wrapper{
+display : flex;
+justify-content: center;
+padding: 10px;
+}
+.texto_small_footer{
+
+}
+/* FIN Styles del FOOTER */
