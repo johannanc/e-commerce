@@ -1,12 +1,15 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
 *{
   box-sizing: border-box;
 
 }
 
 body {
-  font-family: arial;
+  font-family: 'Open Sans', sans-serif;
+  font-family: 'Montaga', serif;
   background-image: url("../img/img-background\ -\ copia.png");
   background-repeat: repeat;
+  color: dimgray;
 }
 
 
@@ -37,50 +40,64 @@ padding: 10px;
 }
 /* FIN Styles del FOOTER */
 
-/* INICIO Styles del REGISTRO */
-.hypervinc_register{
+/* INICIO Styles del REGISTRO y LOGIN */
+.hypervinc_register, .hypervinc_login{
   text-decoration: none;
   color: inherit;
 }
-.register_container{
+.register_container, .login_container{
   display: inline-flex;
   flex-wrap: wrap;
   flex-direction: column;
   width: 100%;
   margin-left: 0.5em;
 }
-.input_register{
+.input_register, .input_login{
   border: solid 1px rgb(133, 132, 132);
   display: block;
   width: 80%;
   height: 50px;
   font-size: 1.3em;
+  padding: 0.3em 0.3em;
+  background-color: rgba(246, 171, 202, 0.37);
+  margin: 0.5em 0 1em 0;
 }
-.label_register{
+.label_register, .label_login{
   font-size: 1.5em;
 }
-.h2_register{
+.h2_register, .h2_login{
   font-size: 2em;
 }
-.input_register_checkbox{
+.input_register_checkbox, .input_login_checkbox{
   margin-left: 0.5em;
+  width: 1em;
+  height: 1em;
 }
-.button_register{
+.button_register, .button_login{
   font-size: 1.5em;
   margin-top: 20px;
   padding: 0.5em 1em;
+  background-color: rgba(246, 171, 202);
+  color: inherit;
 }
-/* FIN Styles del REGISTRO */
+/* FIN Styles del REGISTRO y LOGIN */
 
 @media (min-width: 992px) {
-  /* INICIO Styles del REGISTRO */
+  /* INICIO Styles del REGISTRO y LOGIN */
   .div_container{
     display: inline-flex;
     width: 100%;
+    justify-content: center;
   }
-  .register_container{
-    align-items: center;
+  .register_container, .login_container{
     margin-left: none;
+    width: 40%;
   }
-  /* FIN Styles del REGISTRO */
+  .input_register, .input_login{
+    width: 100%;
+    height: 30px;
+    font-size: 1em;
+    padding: 1em 1em;
+  }
+  /* FIN Styles del REGISTRO y LOGIN */
 }
