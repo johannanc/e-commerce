@@ -36,3 +36,51 @@ padding: 10px;
 
 }
 /* FIN Styles del FOOTER */
+
+/* INICIO Styles del REGISTRO */
+.hypervinc_register{
+  text-decoration: none;
+  color: inherit;
+}
+.register_container{
+  display: inline-flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  width: 100%;
+  margin-left: 0.5em;
+}
+.input_register{
+  border: solid 1px rgb(133, 132, 132);
+  display: block;
+  width: 80%;
+  height: 50px;
+  font-size: 1.3em;
+}
+.label_register{
+  font-size: 1.5em;
+}
+.h2_register{
+  font-size: 2em;
+}
+.input_register_checkbox{
+  margin-left: 0.5em;
+}
+.button_register{
+  font-size: 1.5em;
+  margin-top: 20px;
+  padding: 0.5em 1em;
+}
+/* FIN Styles del REGISTRO */
+
+@media (min-width: 992px) {
+  /* INICIO Styles del REGISTRO */
+  .div_container{
+    display: inline-flex;
+    width: 100%;
+  }
+  .register_container{
+    align-items: center;
+    margin-left: none;
+  }
+  /* FIN Styles del REGISTRO */
+}

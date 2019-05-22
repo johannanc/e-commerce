@@ -14,5 +14,5 @@ Grupo 4
 PARA CARGAR TUS CAMBIOS EN EL REPOSITORIO
 1- En la consola "git add ."
 2- Luego "git commit -m "acá va un mensaje sobre tus cambios""
-3- git pull origin master
+3- git push origin master
 4- Recordá que siempre que quieras ver qué archivos tenes para commitear o lo que sea podes poner "git status".
