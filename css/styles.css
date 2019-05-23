@@ -239,7 +239,8 @@ body {
   flex-wrap: wrap;
   flex-direction: column;
   width: 100%;
-  margin-left: 0.5em;
+  background-color: white;
+  padding: 20px;
 }
 .input_register, .input_login{
   border: solid 1px rgb(133, 132, 132);
@@ -250,6 +251,8 @@ body {
   padding: 0.3em 0.3em;
   background-color: rgba(246, 171, 202, 0.37);
   margin: 0.5em 0 1em 0;
+  outline-color: #c78283;
+  color: dimgray;
 }
 .label_register, .label_login{
   font-size: 1.5em;
@@ -268,6 +271,7 @@ body {
   padding: 0.5em 1em;
   background-color: rgba(246, 171, 202);
   color: inherit;
+  border-radius: 10px;
 }
 /* FIN Styles del REGISTRO y LOGIN */
 
