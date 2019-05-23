@@ -76,7 +76,6 @@ body {
   padding: 5px 2px 5px;
   color:inherit;
 }
-
 .footer_marca{
   font-family: inherit;
   font-size: 2em;
@@ -84,7 +83,6 @@ body {
 .footer_heart{
   color:#c78283;
 }
-
 .footer_creditos{
 /* Estilo del contenedor de los creditos al pie */
   background-color:#c78283;
@@ -97,6 +95,13 @@ body {
   text-align: center;
 }
 /* FIN Styles del FOOTER */
+
+.div_container{
+  /* Agregue esto para que los contenedores del
+  login y registro se despeguen del footer y header */
+  margin-top:25px;
+  margin-bottom: 25px;
+}
 
 /* INICIO Styles del REGISTRO y LOGIN */
 .hypervinc_register, .hypervinc_login{
