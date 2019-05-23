@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&display=swap');
+
 *{
   box-sizing: border-box;
 
@@ -6,37 +7,94 @@
 
 body {
   font-family: 'Open Sans', sans-serif;
-  font-family: 'Montaga', serif;
-  background-image: url("../img/img-background\ -\ copia.png");
+  /* font-family: 'Montaga', serif; */
+  background-image: url("../img/hearts_3.png");
   background-repeat: repeat;
   color: dimgray;
+  margin:0,auto;
 }
 
+.contenedor{
+  /* Contenedor del contenido del body */
+  margin: 35px 70px 25px;
+}
 
-
-
-/* INICIO Styles del FOOTER */
+/* INICIO STYLES del FOOTER */
+.footer_ul{
+/* Estilo de las listas usadas en el footer */
+  margin: 0;
+  /* overflow:hidden; */
+  list-style-type: none;
+  padding: 5px;
+}
+.footer_ul a{
+/* Estilo de los links en el footer */
+  text-decoration:none;
+  color: inherit;
+  font-family: inherit;
+}
+.footer_ul a:hover {
+/* Estilo de los links al pasarles el mouse en el footer */
+  color: #c78283;
+  text-decoration-style: solid;
+}
+.footer_iconos li{
+/* Estilos de los iconos usados en el footer */
+  display: flex;
+  justify-content: flex-start;
+  padding: 5px 0px 5px;
+}
 .footer_container{
-  border: solix, 1px, blue;
-  display : flex;
-  flex-wrap : wrap ;
-  padding: 10px;
+/* Estilo del contenedor del footer */
+  background-color:white;
+  display:flex;
+  flex-wrap:wrap;
+  font-size: 13px;
+  line-height : 18px;
+  padding: 5px 15px 5px;
 }
-.footer_seccion1{
-  display : inline-flex;
-  padding: 10px;
+.footer_titulos{
+  /* Estilos de los titulos del footer */
+  font-family: inherit;
+  text-transform: uppercase;
+  font-weight:bold;
+  font-size: 14px;
+  padding: 5px 0px 5px;
+  margin-bottom: 7px;
+  border-bottom: solid dimgrey 2px;
+  border-color: #c78283;
 }
-.footer_seccion2{
-display : inline-flex;
-padding: 10px;
+.footer_ayuda, .footer_miCuenta, .footer_contacto, .footer_social{
+/* Estilos de las 4 cajas dentro del contenedor del footer */
+  flex-grow: 1;
+  flex-basis: 0;
 }
-.footer_wrapper{
-display : flex;
-justify-content: center;
-padding: 10px;
+.footer_newsletter, .footer_newsletter input {
+/* Estilos para el input del newsletter en footer */
+  display:flex;
+  flex-grow: 1;
+  padding: 5px 2px 5px;
+  color:inherit;
 }
-.texto_small_footer{
 
+.footer_marca{
+  font-family: inherit;
+  font-size: 2em;
+}
+.footer_heart{
+  color:#c78283;
+}
+
+.footer_creditos{
+/* Estilo del contenedor de los creditos al pie */
+  background-color:#c78283;
+  color: white;
+  font-family: inherit;
+  font-size: 12px;
+  padding: 1px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  text-align: center;
 }
 /* FIN Styles del FOOTER */
 
