@@ -139,6 +139,7 @@ body {
 .footer_marca{
   font-family: inherit;
   font-size: 2em;
+  text-align: center;
 }
 .footer_heart{
   color:#c78283;
