@@ -294,3 +294,71 @@ body {
   }
   /* FIN Styles del REGISTRO y LOGIN */
 }
+/* INICIO PREGUNTAS FRECUENTES */
+.faq-container {
+  max-width: 100%;
+  margin: auto;
+  background-color: white;
+  overflow: hidden;
+}
+.question-container {
+  padding: 40px;
+  overflow: hidden;
+  color: black;
+}
+
+.link-inicio p {
+  color: black;
+  font-size: 20px;
+}
+.link-inicio a {
+  text-decoration: none;
+  color: black;
+}
+
+.sizes-container {
+  max-width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.sizes-container img {
+  width: 100%;
+}
+
+.pay-container {
+  overflow: hidden;
+}
+
+.pay {
+  max-width: 80px;
+  float: left;
+}
+
+.oca-container {
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.oca {
+  max-width: 100px;
+}
+
+.locales {
+  text-decoration: none;
+  color: inherit;
+}
+
+.envio-icon {
+  text-align: center;
+  color: none;
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+
+.fa-shuttle-van {
+  font-size: 40px;
+}
+/* FIN PREGUNTAS FRECUENTES */
