@@ -328,11 +328,13 @@ body {
   text-decoration: none;
   color: #c78283;
 }
-
-.sizes-container {
+.sizes-container{
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+}
+.sizes-container img {
+  max-width: 80%;
 }
 .pay-container {
   display:flex;
