@@ -1,11 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&display=swap');
 *{
   box-sizing: border-box;
-
 }
+
 body {
   font-family: 'Open Sans', sans-serif;
-  /* font-family: 'Montaga', serif; */
   background-image: url("../img/hearts_3.png");
   background-repeat: repeat;
   color: dimgray;
@@ -19,57 +18,54 @@ body {
 
 /* INICIO STYLES del HEADER */
 .header_container{
-/* Estilo del contenedor del header */
-  background-color:white;
-  display:flex;
-  flex-wrap:wrap;
-  padding: 35px 25px 35px;
-}
-.header_ul{
-/* Estilo de las listas usadas en el header */
+  /* border: red dotted 1px; */
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  padding: 15px;
+}
+.header_nav, .header_busqueda{
+  flex-grow: 2;
+  flex-basis: 0;
+}
+.header_logo,.header_iconos{
   flex-grow: 1;
   flex-basis: 0;
-  font-family: inherit;
-  list-style-type: none;
-  margin: 0px;
+}
+.header_logo, .header_container ul, .header_busqueda, .header_container li{
+  /* border: red dotted 1px; */
+  margin:0px;
   padding: 0px;
-  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+  padding: 5px;
+  justify-content:space-around;
 }
-.header_ul a{
-/* Estilo de los links en el header */
-  font-family: inherit;
+.header_logo img{
+  width:200px;
+  height: auto;
+}
+.header_nav a, .header_iconos a{
+  text-decoration: none;
   color: inherit;
-  text-decoration:none;
-  padding: 0px 0px 0px 0px
+  display: flex;
+  text-transform: uppercase;
+  font-size: 14px;
 }
-.header_ul a:hover {
-/* Estilo de los links al pasarles el mouse en el header */
+.header_nav a:hover, .header_iconos a:hover {
   color: #c78283;
   text-decoration-style: solid;
   font-weight: bold;
 }
-.header_logo, .header_nav, .header_regLog{
-/* Estilos de las 3 cajas dentro del contenedor del header */
-  display: flex;
-  flex-grow: 1;
-  flex-basis: 0;
-}
-.header_nav{
-  text-transform: uppercase;
-  font-size: 14px;
-  display: flex;
-  flex-grow: 2;
-}
-.header_nav li{
-  display: flex;
-  flex-grow: 1;
-  flex-basis: 0;
-}
-.header_regLog li{
-  display: flex;
-  flex-grow: 1;
-  flex-basis: 0;
+.header_busquedaInput{
+  margin: 0;
+  padding: 5px;
+  width: 100%;
+  display:flex;
+  font-family: inherit;
 }
 /* FIN STYLES del HEADER */
 
@@ -145,6 +141,7 @@ body {
   }
 }
 /*INICIO BANNER*/
+
 /* INICIO STYLES del FOOTER */
 .footer_ul{
 /* Estilo de las listas usadas en el footer */
@@ -201,13 +198,16 @@ body {
   padding: 5px 2px 5px;
   color:inherit;
 }
-.footer_marca{
-  font-family: inherit;
-  font-size: 2em;
-  text-align: center;
+
+.footer_marca a{
+  display:flex;
+  align-items: center;
+  padding-bottom: 15px;
+  justify-content:space-around;
 }
-.footer_heart{
-  color:#c78283;
+.footer_marca img{
+  width: 160px;
+  height: auto;
 }
 .footer_creditos{
 /* Estilo del contenedor de los creditos al pie */
@@ -295,70 +295,75 @@ body {
   /* FIN Styles del REGISTRO y LOGIN */
 }
 /* INICIO PREGUNTAS FRECUENTES */
-.faq-container {
-  max-width: 100%;
-  margin: auto;
+.question-container{
   background-color: white;
+  margin-top:25px;
+  margin-bottom: 25px;
   overflow: hidden;
+  color: inherit;
 }
-.question-container {
-  padding: 40px;
-  overflow: hidden;
-  color: black;
+.question-container i{
+  color: #c78283;
+}
+.question-container p, .question-container h3, .question-container h4{
+  padding: 0px 25px 0px;
+}
+.question-container h3{
+  color: #c78283;
+}
+.question-container h4{
+  color: dimgray;
 }
 
 .link-inicio p {
-  color: black;
+  padding: 0px 25px 0px;
+  color: inherit;
   font-size: 20px;
 }
 .link-inicio a {
   text-decoration: none;
-  color: black;
+  color: inherit;
+}
+.link-inicio a:hover {
+  text-decoration: none;
+  color: #c78283;
 }
 
 .sizes-container {
-  max-width: 100%;
   display: flex;
   flex-wrap: wrap;
-  flex-direction: column;
   justify-content: center;
 }
-
-.sizes-container img {
-  width: 100%;
-}
-
 .pay-container {
-  overflow: hidden;
+  display:flex;
+  justify-content: space-around;
 }
-
-.pay {
+.pay-container img{
   max-width: 80px;
-  float: left;
 }
-
-.oca-container {
-  max-width: 100%;
-  overflow: hidden;
+.oca-container{
+  display:flex;
+  justify-content: space-around;
 }
-
-.oca {
+.oca-container img{
+  border-radius: 100px;
   max-width: 100px;
 }
-
-.locales {
-  text-decoration: none;
-  color: inherit;
-}
-
 .envio-icon {
   text-align: center;
   color: none;
   margin-top: 80px;
   margin-bottom: 80px;
+  font-size: 1.5em;
 }
-
-.fa-shuttle-van {
-  font-size: 40px;
+.question-container a{
+  text-decoration: none;
+  font-weight: bold;
+  color: dimgray;
+}
+.question-container a:hover{
+  text-decoration: none;
+  font-weight: bold;
+  color: #c78283;
 }
 /* FIN PREGUNTAS FRECUENTES */
