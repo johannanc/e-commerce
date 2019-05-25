@@ -358,6 +358,7 @@ body {
 }
 .pay-container img{
   max-width: 80px;
+  max-height: 80px;
 }
 .oca-container{
   display:flex;
@@ -366,6 +367,7 @@ body {
 .oca-container img{
   border-radius: 100px;
   max-width: 100px;
+  max-height: 100px;
 }
 .envio-icon {
   text-align: center;
