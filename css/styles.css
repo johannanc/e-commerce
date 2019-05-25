@@ -142,6 +142,46 @@ body {
 }
 /*INICIO BANNER*/
 
+/*INICIO PRODUCTOS */
+
+.products_container{
+  position: relative;
+  background-color: white;
+  margin-top:25px;
+  margin-bottom: 25px;
+  overflow: hidden;
+  color: inherit;
+  height: auto;
+  width: 100%;
+    flex-direction: row;
+}
+
+.product_container{
+ display: flex;
+ margin: 10px;
+ 
+}
+
+.img_poduct{
+  position: relative;
+  width: 33.33%;
+  height: auto;
+
+}
+
+.text_product{
+  margin-left:145px;
+  margin-top: 0px;
+  padding: 0;
+}
+
+.text_product1{
+margin-left: 200px;
+color: red;
+}
+
+/*FIN DE PRODUCTOS */
+
 /* INICIO STYLES del FOOTER */
 .footer_ul{
 /* Estilo de las listas usadas en el footer */
