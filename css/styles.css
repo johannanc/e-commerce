@@ -21,6 +21,10 @@ body {
   .header_container {
     flex-direction: row !important;
   }
+
+  .header_nav ul {
+    flex-direction: row !important;
+  }
 }
 
 .header_container{
@@ -37,10 +41,15 @@ body {
   flex-grow: 2;
   flex-basis: 0;
 }
+.header_nav ul {
+  flex-direction: column;
+}
+
 .header_logo,.header_iconos{
   flex-grow: 1;
   flex-basis: 0;
 }
+
 .header_logo, .header_container ul, .header_busqueda, .header_container li{
   /* border: red dotted 1px; */
   margin:0px;
