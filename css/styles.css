@@ -17,9 +17,16 @@ body {
 }
 
 /* INICIO STYLES del HEADER */
+@media (min-width: 992px) {
+  .header_container {
+    flex-direction: row !important;
+  }
+}
+
 .header_container{
   /* border: red dotted 1px; */
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
