@@ -286,6 +286,9 @@ body {
   text-decoration: none;
   color: inherit;
 }
+.hypervinc_register:hover, .hypervinc_login:hover{
+  color: #c78283;
+}
 .register_container, .login_container{
   display: inline-flex;
   flex-wrap: wrap;
