@@ -17,7 +17,7 @@ body {
 }
 
 /* INICIO STYLES del HEADER */
-@media (min-width: 992px) {
+/* @media (min-width: 992px) {
   .header_container {
     flex-direction: row !important;
   }
@@ -25,7 +25,8 @@ body {
   .header_nav ul {
     flex-direction: row !important;
   }
-}
+} */
+/* PASÉ LOS ESTILOS DE ESA MEDIA QUERY ABAJO DE TODO */
 
 .header_container{
   /* border: red dotted 1px; */
@@ -82,6 +83,7 @@ body {
   width: 100%;
   display:flex;
   font-family: inherit;
+  outline-color: #c78283;
 }
 /* FIN STYLES del HEADER */
 
@@ -249,8 +251,8 @@ body {
   flex-grow: 1;
   padding: 5px 2px 5px;
   color:inherit;
+  outline-color: #c78283;
 }
-
 .footer_marca a{
   display:flex;
   align-items: center;
@@ -492,6 +494,16 @@ body {
 }
 /* FIN Styles PERFIL */
 @media (min-width: 992px) {
+  /* INICIO Styles del HEADER */
+  .header_container {
+    flex-direction: row !important;
+  }
+
+  .header_nav ul {
+    flex-direction: row !important;
+  }
+  /* FIN Styles del Header */
+
   /* INICIO Styles del REGISTRO y LOGIN */
   .div_container{
     display: inline-flex;
