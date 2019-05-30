@@ -187,14 +187,134 @@ body {
   font-weight: bold;
   padding: 10px;
 }
-.product_descripcion{
+.product_cloth{
   color: #c78283;
   font-family: inherit;
   font-size: 22px;
   font-weight: bold;
   padding: 5px;
+  text-align: center;
 }
+
+.product_cloth h5{
+  color:dimgray;
+  margin-top: 5px;
+}
+
 /*FIN DE PRODUCTOS */
+
+/*INICIO DE DETALLES DE PRODUCTOS */
+.product_extra_container{
+  display: block;
+  align-content: center;
+  width: 100%;
+  height: auto;
+  margin-top: 15px;
+}
+
+.product_precio{
+  text-align: center;
+  color: dimgray;
+  font-size: 20px;
+}
+
+.product_descripcion{
+  text-align: justify;
+  font-size: 14px;
+}
+
+.product_extra_container h3{
+  margin-top: 10px;
+  background-color: #FFF3F5;
+  padding: 5px;
+}
+
+.product_extra_container1{
+display: block;
+align-content: center;
+width: 100%;
+height: auto;
+margin-top: 15px;
+}
+
+.product_extra_container1 h3{
+  margin-top: 10px;
+  background-color: #FFF3F5;
+  padding: 5px;
+}
+
+.product_color{
+  width: 40px;
+  height: 30px;
+  padding: 5px;
+  background-color: white;
+  border: solid;
+  margin-bottom: 10px;
+}
+
+.product_color1{
+  border: solid;
+  width: 40px;
+  height: 30px;
+  padding: 5px;
+  margin-top: 5px;
+  background-color: grey;
+}
+
+.product_talle h4{
+  width: 40px;
+  height: 30px;
+  padding: 5px;
+  margin-top: 5px;
+  border: solid;
+  text-align: center;
+}
+
+.product_talle1 h4{
+  width: 40px;
+  height: 30px;
+  padding: 5px;
+  margin-top: 5px;
+  border: solid;
+  text-align: center;
+}
+
+.product_talle2 h4{
+  width: 40px;
+  height: 30px;
+  padding: 5px;
+  margin-top: 5px;
+  border: solid;
+  text-align: center;
+}
+.product_botton_buy{
+font-size: 1em;
+text-align: center;
+margin-top: 15px;
+padding: 0.5em 1em;
+background-color: #F6D9DE;
+color: dimgray;
+border-radius: 20px;
+}
+.product_botton_buy a{
+text-decoration:none;
+}
+.product_botton_fav{
+font-size: 1em;
+text-align: center;
+margin-top: 15px;
+padding: 0.5em 1em;
+background-color: #F6D9DE;
+color: dimgray;
+border-radius: 20px;
+}
+.product_botton_fav a{
+text-decoration:none;
+}
+
+
+
+/* FIN DE DETALLES DE PRODUCTOS */
 
 /* INICIO STYLES del FOOTER */
 .footer_ul{
