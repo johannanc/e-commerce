@@ -219,8 +219,12 @@ body {
 }
 
 .product_descripcion{
-  text-align: justify;
-  font-size: 14px;
+  color: #c78283;
+  font-family: inherit;
+  font-size: 22px;
+  font-weight: bold;
+  padding: 5px;
+  text-align: center;
 }
 
 .product_extra_container h3{
