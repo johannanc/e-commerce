@@ -454,6 +454,10 @@ text-decoration:none;
   color: inherit;
   border-radius: 10px;
 }
+/*.message_error{
+  color: red;
+}*/
+
 /* FIN Styles del REGISTRO y LOGIN */
 
 /* INICIO PREGUNTAS FRECUENTES */
