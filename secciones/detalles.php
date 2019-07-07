@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     <!-- Iconito de la pestania del navegador, favicon -->
     <link rel="icon" type="image/png" href="../img/favicon.ico">
-    <title>Productos</title>
+    <title>Detalles</title>
   </head>
 
   <body>
@@ -59,84 +59,78 @@
   </header>
   <!-- FIN del HEADER -->
 
-  <!-- INICIO DE PRODUCTOS DE MUESTRA -->
+  <!-- INICIO DE DETALLE DE PRODUCTOS -->
   <div class="products_container">
 
     <div class="product_container">
       <div class="product_imagen">
           <a href="../index.html"><img src="../img/sweaterwhite.jpg" alt="photo"></a>
       </div>
-      <div class="product_descripcion">
-          Sweater Winter
-      </div>
-      <div class="product_precio1">
-        $2890
+      <div class="product_cloth">
+          Sweater Winter <h5> Frente </h5>
       </div>
     </div>
 
     <div class="product_container">
       <div class="product_imagen">
-          <a href="../index.html"><img src="../img/camisabrickfuxia.jpg" alt="photo"></a>
+          <a href="../index.html"><img src="../img/whiteback.jpg" alt="photo"></a>
+      </div>
+      <div class="product_cloth">
+          Sweater Winter <h5> Espalda </h5>
+      </div>
+    </div>
+
+    <div class="product_container">
+
+      <div class="product_cloth">
+          Sweater Winter
+      </div>
+      <div class="product_precio">
+        $2890
       </div>
       <div class="product_descripcion">
-          Camisa Americana
-      </div>
-      <div class="product_precio1">
-        $2300
-      </div>
-     </div>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      Aliquam vitae mollis dolor, sit amet consectetur lacus.
+      Cras tincidunt in ipsum at mollis.
+      Curabitur tempus nunc vel dolor vehicula eleifend.
+      In eget urna eget eros feugiat aliquam.
 
-     <div class="product_container">
-       <div class="product_imagen">
-           <a href="../index.html"><img src="../img/chaleco.jpg" alt="photo"></a>
-       </div>
-       <div class="product_descripcion">
-           Chaleco Alaska
-       </div>
-       <div class="product_precio1">
-         $2100
-       </div>
-     </div>
-
-     <div class="product_container">
-       <div class="product_imagen">
-           <a href="../index.html"><img src="../img/vestido.jpg" alt="photo"></a>
-       </div>
-       <div class="product_descripcion">
-           Vestido Liso
-       </div>
-       <div class="product_precio1">
-         $2890
-       </div>
-     </div>
-
-     <div class="product_container">
-       <div class="product_imagen">
-           <a href="../index.html"><img src="../img/jeanhigh.jpg" alt="photo"></a>
-       </div>
-       <div class="product_descripcion">
-           Jean High
-       </div>
-       <div class="product_precio1">
-         $2300
-       </div>
       </div>
 
-      <div class="product_container">
-        <div class="product_imagen">
-            <a href="../index.html"><img src="../img/camisaraya.jpg" alt="photo"></a>
-        </div>
-        <div class="product_descripcion">
-            Camisa Rayada
-        </div>
-        <div class="product_precio1">
-          $2100
-        </div>
+      <div class="product_extra_container">
+        <h3> Color </h3>
+<div class="product_color">
+</div>
+<div class="product_color1">
+</div>
       </div>
+
+      <div class="product_extra_container1">
+        <h3> Talle </h3>
+<div class="product_talle">
+  <h4> 1 </h4>
+</div>
+
+<div class="product_talle1">
+  <h4> 2 </h4>
+</div>
+
+<div class="product_talle2">
+<h4> 3 </h4>
+</div>
+      </div>
+
+      <div class="product_botton_buy">
+      <a class="hypervinc_comprar" href="registro.html">Comprar</a> <br>
+      </div>
+      <div class="product_botton_fav">
+      <a class="hypervinc_favoritos" href="proximamente.html">Mis favoritos</a> <br>
+      </div>
+
   </div>
-  <!-- FIN DE PRODUCTOS MUESTRA -->
+</div>
 
-
+  <!-- FIN DE DETALLE DE PRODUCTOS -->
 
     <!-- INICIO del FOOTER -->
     <footer>

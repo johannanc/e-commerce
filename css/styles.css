@@ -180,12 +180,13 @@ body {
 .product_imagen img{
   width: 100%;
 }
-.product_precio{
+.product_precio1{
   color: inherit;
   font-family: inherit;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: bold;
   padding: 10px;
+  text-align: left;
 }
 .product_cloth{
   color: #c78283;
@@ -219,12 +220,12 @@ body {
 }
 
 .product_descripcion{
-  color: #c78283;
+  color:#B4B2B2;
   font-family: inherit;
-  font-size: 22px;
+  font-size: 15px;
   font-weight: bold;
   padding: 5px;
-  text-align: center;
+  text-align: left;
 }
 
 .product_extra_container h3{
