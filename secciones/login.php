@@ -110,7 +110,7 @@ $login = [
     <section class="div_container">
       <div class="login_container">
         <h2 class="h2_login">Login</h2>
-        <form class="formulario_login" action="loginja.php" method="post">
+        <form class="formulario_login" action="login.php" method="post">
           <!-- Datos de login -->
           <?php foreach ($login as $datos => $dato): ?>
             <label class="label_login" for="<?= $dato[0] ?>"><?= $datos ?></label> <br>
