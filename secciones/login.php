@@ -1,6 +1,41 @@
 <!DOCTYPE html>
 
-<?php 
+<?php
+$errorEmail = "";
+$errorContrasenia = "";
+$hayErrores = false;
+$errores = 0;
+/*if (filter_var($_POST["email"], FILTER_VALIDATE_EMAIL) == false) {
+  echo "El email no tiene el formato correcto";
+}*/
+
+
+
+if($_POST){
+$email = trim($_POST["email"]);
+$contrasenia = trim($_POST["contrasenia"]);
+//$confirmarcontrasenia = trim($_POST["contraseniaConfirmar"]);
+}
+
+if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
+  $errorEmail = "Email no válido";
+  $hayErrores = true;
+}
+if ($contrasenia ==""){
+$errorContrasenia = "Completa la contraseña";
+$hayErrores = true;
+}
+else if (strlen($contrasenia)<4)
+{
+  $errorContrasenia = "La contraseña debe tener al menos 4 caracteres";
+  $hayErrores = true;
+
+}/*else if($contrasenia != $confirmarcontrasenia){
+  $errorContrasenia = "Las contraseñas no coinciden";
+  $hayErrores = true;
+}*/
+
+
 
 $login = [
   "Email" => ["email", "Ingrese su email"],
@@ -75,7 +110,7 @@ $login = [
     <section class="div_container">
       <div class="login_container">
         <h2 class="h2_login">Login</h2>
-        <form class="formulario_login" action="login.php" method="post">
+        <form class="formulario_login" action="loginja.php" method="post">
           <!-- Datos de login -->
           <?php foreach ($login as $datos => $dato): ?>
             <label class="label_login" for="<?= $dato[0] ?>"><?= $datos ?></label> <br>
