@@ -8,7 +8,7 @@ if (isset($_COOKIE['userEmail'])) {
 }
 
 function getAllUsers(){
-return json_decode(file_get_contents('users.json'), true);
+return json_decode(file_get_contents('../jsonUsuarios.json'), true);
 }
 
 
