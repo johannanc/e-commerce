@@ -21,7 +21,7 @@ $passFromPost = trim ($_POST['password']);
 
 $userFound = getByEmail($emailFromPost);
 
-  if ($userFound != 0) {
+  if ($userFound) {
 
     //almaceno la cookie
     if (isset($_POST['remember'])) {
@@ -124,8 +124,9 @@ $login = [
           <?php foreach ($login as $datos => $dato): ?>
             <label class="label_login" for="<?= $dato[0] ?>"><?= $datos ?></label> <br>
             <input class="input_login" id="<?= $dato[0] ?>" type="<?= $dato[0] ?>" name="<?= $dato[0] ?>" value="" placeholder="<?= $dato[1] ?>"> <br>
-            <?= $messageError; ?>
           <?php endforeach; ?>
+          <span style = "color: red;" ><?= $messageError; ?></span> 
+          <br> <br>
           <!-- Recordarme -->
           <label class="label_register" for="remember">Recordarme</label>
           <input class="input_login_checkbox" id="remember" type="checkbox" name="remember" value=""> <br>
