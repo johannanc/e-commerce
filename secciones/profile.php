@@ -3,7 +3,7 @@
 require_once 'funciones.php';
 
 if (!isLoged()) {
-  header('location: loginja.php');
+  header('location: login.php');
   exit;
 }
 
