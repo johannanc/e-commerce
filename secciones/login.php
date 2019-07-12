@@ -5,8 +5,11 @@
 
 require_once 'funciones.php';
 
+$messageError = "";
+
 if (isLoged()) {
   header('location: profile.php');
+  exit;
 }
 
 if ($_POST) {
@@ -18,28 +21,28 @@ $passFromPost = trim ($_POST['password']);
 
 $userFound = getByEmail($emailFromPost);
 
-if ($userFound) {
+  if ($userFound != 0) {
 
     //almaceno la cookie
-  if (isset($_POST['remember'])) {
+    if (isset($_POST['remember'])) {
     setcookie('userEmail', $emailFromPost, time() + 3600);
-  }
+    }
 
     //preguntamos si la contraseñacoincide
-  if ($userFound['password'] == $passFromPost) {
+    if ($userFound['password'] == $passFromPost) {
 
-   //logueo y redirecciono
-  login($userFound);
-  header('location: profile.php');
-  exit;
+    //logueo y redirecciono
+    login($userFound);
+    header('location: index.html');
+    exit;
 
-}else {
-  echo "La contraseña no coincide";
-}
+    } else {
+    $messageError = "Email o contraseña incorrecta";
+    }
 
-}else {
-  echo "El email no esta registrado";
-}
+  } else {
+  $messageError = "Usuario o contraseña incorrecta";
+  }
 }
 
 
@@ -121,6 +124,7 @@ $login = [
           <?php foreach ($login as $datos => $dato): ?>
             <label class="label_login" for="<?= $dato[0] ?>"><?= $datos ?></label> <br>
             <input class="input_login" id="<?= $dato[0] ?>" type="<?= $dato[0] ?>" name="<?= $dato[0] ?>" value="" placeholder="<?= $dato[1] ?>"> <br>
+            <?= $messageError; ?>
           <?php endforeach; ?>
           <!-- Recordarme -->
           <label class="label_register" for="remember">Recordarme</label>

@@ -34,6 +34,7 @@ $email = "";
 $pais = "";
 $contrasenia = "";
 $repContrasenia = "";
+$user = "";
 $errorFoto = "";
 
 $registro = [
@@ -48,6 +49,12 @@ $registro = [
     "type" => "text",
     "value" => $apellido,
     "placeholder" =>"Escriba su apellido aquí"
+    ],
+  "Usuario" => [
+    "name" => "user",
+    "type" => "text",
+    "value" => $user,
+    "placeholder" => "Escriba aquí su usuario"
     ],
   "Email" => [
     "name" => "email",
@@ -76,6 +83,7 @@ if ($_POST) {
   $nombre = trim($_POST["firstname"]);
   $apellido = trim($_POST["lastname"]);
   $email = trim($_POST["email"]);
+  $user = trim($_POST["user"]);
   $pais = trim($_POST["country"]);
   $contrasenia = trim($_POST["password"]);
   $hashContrasenia = password_hash($contrasenia, PASSWORD_DEFAULT);
@@ -93,6 +101,12 @@ if ($_POST) {
     "type" => "text",
     "value" => $apellido,
     "placeholder" =>"Escriba su apellido aquí"
+    ],
+  "Usuario" => [
+    "name" => "user",
+    "type" => "text",
+    "value" => $user,
+    "placeholder" => "Escriba aquí su usuario"
     ],
   "Email" => [
     "name" => "email",
