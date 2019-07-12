@@ -1,40 +1,46 @@
 <!DOCTYPE html>
 
 <?php
-$errorEmail = "";
-$errorContrasenia = "";
-$hayErrores = false;
-$errores = 0;
-/*if (filter_var($_POST["email"], FILTER_VALIDATE_EMAIL) == false) {
-  echo "El email no tiene el formato correcto";
-}*/
 
 
+require_once 'funciones.php';
 
-if($_POST){
-$email = trim($_POST["email"]);
-$contrasenia = trim($_POST["contrasenia"]);
-//$confirmarcontrasenia = trim($_POST["contraseniaConfirmar"]);
+if (isLoged()) {
+  header('location: profile.php');
 }
 
-if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
-  $errorEmail = "Email no válido";
-  $hayErrores = true;
-}
-if ($contrasenia ==""){
-$errorContrasenia = "Completa la contraseña";
-$hayErrores = true;
-}
-else if (strlen($contrasenia)<4)
-{
-  $errorContrasenia = "La contraseña debe tener al menos 4 caracteres";
-  $hayErrores = true;
+if ($_POST) {
+/*$userInDB = 'nat@gmail.com';
+$passInDB = '1234';*/
 
-}/*else if($contrasenia != $confirmarcontrasenia){
-  $errorContrasenia = "Las contraseñas no coinciden";
-  $hayErrores = true;
-}*/
+$emailFromPost = trim ($_POST['email']);
+$passFromPost = trim ($_POST['password']);
 
+$userFound = getByEmail($emailFromPost);
+
+if ($userFound) {
+
+    //almaceno la cookie
+  if (isset($_POST['remember'])) {
+    setcookie('userEmail', $emailFromPost, time() + 3600);
+  }
+
+    //preguntamos si la contraseñacoincide
+  if ($userFound['password'] == $passFromPost) {
+
+   //logueo y redirecciono
+  login($userFound);
+  header('location: profile.php');
+  exit;
+
+}else {
+  echo "La contraseña no coincide";
+}
+
+}else {
+  echo "El email no esta registrado";
+}
+}
 
 
 $login = [

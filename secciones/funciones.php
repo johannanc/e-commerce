@@ -15,7 +15,7 @@ return json_decode(file_get_contents('users.json'), true);
 function getByEmail ($email){
   $allUsers = getAllUsers();
 
-  foreach ($allUsers= as $oneUser) {
+  foreach ($allUsers as $oneUser) {
     if ($oneUser['email'] == $email) {
      return $oneUser;
     }
