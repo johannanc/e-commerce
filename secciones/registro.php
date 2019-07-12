@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<?php 
+<?php
 
 require_once("validacionFormulario.php");
 
@@ -17,6 +17,21 @@ require_once("validacionFormulario.php");
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     <!-- Iconito de la pestania del navegador, favicon -->
     <link rel="icon" type="image/png" href="../img/favicon.ico">
+
+    <!-- INICIO LINK A LA JQUERY -->
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <!-- FIN LINK A LA JQUERY -->
+
+    <!-- INICIO LINK A LA BOOTSTRAPS -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <!-- FIN LINK A LA BOOTSTRAPS -->
+
+
     <title>Registro</title>
   </head>
 
@@ -70,42 +85,88 @@ require_once("validacionFormulario.php");
     <section class="div_container">
       <div class="register_container"> <!-- container del registro -->
         <h2 class="h2_register">Crear cuenta</h2>
-        <form class="formulario_registro" enctype="multipart/form-data" action="registro.php" method="post"> <!-- container del formulario --> 
-          <?php foreach ($registro as $datos => $dato): ?>
+          <form class="" enctype="multipart/form-data" action="registro.php" method="post"> <!-- container del formulario -->
 
-            <?php if ($datos == "pais"): ?> <!-- País de nacimiento -->
-              <label class="label_register" for="country">País de nacimiento</label><br>
-              <select class="input_register" name="country" value="">
-                <?php foreach ($continentes as $continente => $paises):?>
-                  <optgroup label=<?= $continente; ?>>
-                    <?php foreach ($paises as $pais):?>
-                      <option value=<?= $pais; ?>> <?= $pais; ?> </option>
-                    <?php endforeach; ?>
-                  </optgroup>
-                <?php endforeach; ?>
-              </select> <br>
-              <?php continue; ?>
-            <?php endif; ?>
+           <div class="form-group">
+           <label for="">Nombre</label>
+           <?php if(isset($error["nombre"])):?>
+             <input type="text" name="nombre" class="form-control"  placeholder="Escribe tu nombre" value="">
+              <?=$error["nombre"]?>
+             <?php else: ?>
+               <input type="text" name="nombre" class="form-control" placeholder= "Escribe tu nombre" value="<?=$nombreBien?>">
+              <?php endif ?>
+            <?=$errorNombre?>
+          </div>
 
-            <?php if ($datos == "imagen"): ?> <!-- Imagen de perfil -->
-              <label class="label_register" for="profile_image">Seleccione una imagen de perfil</label><br><br>
-              <input class="img_register" type="file" name="profile_image" value="">
-              <span class="message_error" style="color: red;"><?php echo "<br>".$errorFoto; ?></span>
-              <br><br>
-              <?php continue; ?>
-            <?php endif; ?>
+          <div class="form-group">
+          <label for="">Apellido</label>
+          <?php if(isset($error["apellido"])):?>
+            <input type="text" name="apellido" class="form-control"  placeholder="Escribe tu apellido" value="">
+             <?=$error["apellido"]?>
+           <?php else: ?>
+              <input type="text" name="apellido" class="form-control" placeholder= "Escribe tu apellido" value="<?=$apellidoBien?>">
+             <?php endif ?>
+           <?=$errorApellido?>
+         </div>
 
-            <label class="label_register" for="<?= $dato["name"] ?>"><?= $datos ?></label><br>
-            <input class="input_register" id="<?= $dato["name"] ?>" type="<?= $dato["type"] ?>" name="<?= $dato["name"] ?>" value="<?= $dato["value"] ?>" placeholder="<?= $dato["placeholder"] ?>"><br>
+         <div class="form-group">
+         <label for="">Usuario</label>
+         <?php if(isset($error["usuario"])):?>
+           <input type="text" name="usuario" class="form-control"  placeholder="Escribe tu usuario" value="">
+            <?=$error["usuario"]?>
+          <?php else: ?>
+             <input type="text" name="usuario" class="form-control" placeholder= "Escribe tu usuario" value="<?=$usuarioBien?>">
+            <?php endif ?>
+          <?=$errorUsuario?>
+        </div>
 
-          <?php endforeach; ?>
-          <!-- Recordarme -->
-          <label class="label_register" for="remember">Recordarme</label>
-          <input class="input_register_checkbox" id="remember" type="checkbox" name="remember" value=""><br>
-          <!-- Boton enviar -->
-          <button class="button_register" type="submit" name="register">Registrarse</button>
+          <div class="form-group">
+          <label for="formGroupExampleInput2">Correo</label>
+          <?php if(isset($error["email"])): ?>
+          <input type="email" name="email" class="form-control" id="inputEmail3" placeholder="Escribe tu email" value="">
+            <?= $error["email"]?>
+          <?php else: ?>
+            <input type="email" name="email" class="form-control" id="inputEmail3" placeholder="Escribe tu email" value="<?=$emailBien?>">
+          <?php endif ?>
+          <?= $errorEmail ?>
+        </div>
+        <!-- PAIS E IMAGEN -->
+
+
+        <div class="form-group">
+        <label for="formGroupExampleInput2" name="password">Contraseña</label>
+        <?php if(isset($error["password"])):?>
+        <input type="password" name="password" class="form-control" id="formGroupExampleInput2" placeholder="Escribe tu contraseña" value="">
+          <?=$error["password"]?>
+        <?php else: ?>
+        <input type="password" name="password" class="form-control" id="formGroupExampleInput2" placeholder="Escribe tu contraseña" value="<?php $apellidoBien?>">
+        <?php endif ?>
+        <?=$errorPassword?>
+        </div>
+
+        <div class="form-group">
+        <label for="formGroupExampleInput2">Confirmar Contraseña</label>
+        <input type="password" name="confirmarPassword" class="form-control" id="formGroupExampleInput2" placeholder="Confirma tu contraseña" value="">
+        </div>
+
+        <div class="form-group">
+            <label class="" for="foto">Seleccione imagen de perfil</label>
+            <?php if(isset($error["foto"])): ?>
+            <input class="" type="file" name="foto" value="">
+            <?=$error["foto"]?>
+            <?php else: ?>
+            <input class="" type="file" name="foto" value="<?php $fotoBien ?>">   <!-- -->
+            <?php endif ?>
+            <?=$errorFoto ?>
+        </div>
+
+            <div class="form-check mb-2 mr-sm-2">
+            <input class="form-check-input" type="checkbox" id="inlineFormCheck">
+            <label class="form-check-label" for="inlineFormCheck">Recordarme</label>
+          </div>
+
+           <button type="submit" class="btn btn-primary mb-2"><i class="fas fa-sign-in-alt"></i>Registrarme</button>
         </form>
-        <br>
         <a class="hypervinc_register" href="login.html">¿Ya está registrado?</a><br>
       </div>
     </section>

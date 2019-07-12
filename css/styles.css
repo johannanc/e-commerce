@@ -88,77 +88,15 @@ body {
 /* FIN STYLES del HEADER */
 
 /*INICIO BANNER*/
-.banner {
-  position: relative; /* IDEA: para que se muestre despues de barra de nav */
-  width: 100%; /* IDEA: ancho navegador */
-  height: calc(100vh - 100px); /* IDEA: 100 menos 100px de barra nav */
-  background-color: #F5F5F5;
-  background-position: center;
-  margin: auto;
-  background-size: cover;
-  transition: all .1s ease-in-out;
-  background-image: url("../img/banner-01.png");
-  animation: banner 20s infinite linear; /* IDEA: 20seg/entre 4 imagenes, cada imagen dura 7seg */
+.full-width {
+  margin-bottom: 20px;
+  margin-top: -30;
 }
-.banner-content {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  height: 100%;
-  color: #FFF;
-  background-color: rgba(0, 22, 40, 0.4);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.banner-caja{
+  padding: 10px;
+  border-radius: 10px;
 }
-.banner-content h1 {
-  margin: 0;
-  padding: 0;
-  padding-bottom: 30px;
-  font-size: 40px;
-  text-align: center;
-}
-
-.banner-content a {
-  text-decoration: none;
-  color: #fff;
-  padding: 9px 20px;
-  border: 1px solid #fff;
-  text-transform: uppercase;
-  transition: all .3s ease-in-out;
-}
-.banner-content a: hover {
-  background-color: #fff;
-  color: black;
-}
-
-@keyframes banner {
-  0% {background-image: url("../img/banner-01.png"); /* IDEA: Tiempo: 0-25% se va a mostrar la primera imagen.*/
-  }
-  25% {
-    background-image: url("../img/banner-01.png");
-  }
-  26% {
-    background-image: url("../img/banner-02.png");
-  }
-  50%{
-    background-image: url("../img/banner-02.png");
-  }
-  51% {
-    background-image: url("../img/banner-03.png");
-  }
-  75%{
-    background-image: url("../img/banner-03.png");
-  }
-  76% {
-    background-image: url("../img/banner-04.png");
-  }
-  100%{
-    background-image: url("../img/banner-04.png");
-  }
-}
-/*INICIO BANNER*/
+/*FIN BANNER*/
 
 /*INICIO PRODUCTOS */
 .products_container{

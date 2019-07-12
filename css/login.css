@@ -1,0 +1,368 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&display=swap');
+*{
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-image: url("../img/hearts_3.png");
+  background-repeat: repeat;
+  color: dimgray;
+  margin: auto;
+}
+
+
+/* INICIO STYLES del HEADER */
+.header_logo img{
+  max-width: 150px;
+  height: auto;
+}
+.header_iconos a{
+  color: inherit;
+}
+
+.form-group{
+}
+/* FIN STYLES del HEADER */
+
+/* INICIO STYLES del FOOTER */
+.footer_ul{
+/* Estilo de las listas usadas en el footer */
+  margin: 0;
+  /* overflow:hidden; */
+  list-style-type: none;
+  padding: 5px;
+}
+.footer_ul a{
+/* Estilo de los links en el footer */
+  text-decoration:none;
+  color: inherit;
+  font-family: inherit;
+}
+.footer_ul a:hover {
+/* Estilo de los links al pasarles el mouse en el footer */
+  color: #c78283;
+  text-decoration-style: solid;
+}
+.footer_iconos li{
+/* Estilos de los iconos usados en el footer */
+  display: flex;
+  justify-content: flex-start;
+  padding: 5px 0px 5px;
+}
+.footer_container{
+/* Estilo del contenedor del footer */
+  background-color:white;
+  display:flex;
+  flex-wrap:wrap;
+  font-size: 13px;
+  line-height : 18px;
+  padding: 5px 15px 5px;
+}
+.footer_titulos{
+  /* Estilos de los titulos del footer */
+  font-family: inherit;
+  text-transform: uppercase;
+  font-weight:bold;
+  font-size: 14px;
+  padding: 5px 0px 5px;
+  margin-bottom: 7px;
+  border-bottom: solid #c78283 2px;
+}
+.footer_ayuda, .footer_miCuenta, .footer_contacto, .footer_social{
+/* Estilos de las 4 cajas dentro del contenedor del footer */
+  flex-grow: 1;
+  flex-basis: 0;
+}
+.footer_newsletter, .footer_newsletter input {
+/* Estilos para el input del newsletter en footer */
+  display:flex;
+  flex-grow: 1;
+  padding: 5px 2px 5px;
+  color:inherit;
+  outline-color: #c78283;
+}
+.footer_marca a{
+  display:flex;
+  align-items: center;
+  padding-bottom: 15px;
+  justify-content:space-around;
+}
+.footer_marca img{
+  width: 160px;
+  height: auto;
+}
+.footer_creditos{
+/* Estilo del contenedor de los creditos al pie */
+  background-color:#c78283;
+  color: white;
+  font-family: inherit;
+  font-size: 12px;
+  padding: 1px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  text-align: center;
+}
+/* FIN Styles del FOOTER */
+
+.div_container{
+  /* Agregue esto para que los contenedores del
+  login y registro se despeguen del footer y header */
+  margin-top:25px;
+  margin-bottom: 25px;
+}
+
+/* INICIO Styles del REGISTRO y LOGIN */
+.hypervinc_register, .hypervinc_login{
+  text-decoration: none;
+  color: inherit;
+}
+.hypervinc_register:hover, .hypervinc_login:hover{
+  color: #c78283;
+}
+.register_container, .login_container{
+  display: inline-flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  width: 100%;
+  background-color: white;
+  padding: 20px;
+}
+.input_register, .input_login{
+  border: solid 1px rgb(133, 132, 132);
+  display: block;
+  width: 80%;
+  height: 50px;
+  font-size: 1.3em;
+  padding: 0.3em 0.3em;
+  background-color: rgba(246, 171, 202, 0.37);
+  margin: 0.5em 0 1em 0;
+  outline-color: #c78283;
+  color: dimgray;
+}
+.label_register, .label_login{
+  font-size: 1.5em;
+}
+.h2_register, .h2_login{
+  font-size: 2em;
+}
+.input_register_checkbox, .input_login_checkbox{
+  margin-left: 0.5em;
+  width: 1em;
+  height: 1em;
+}
+.button_register, .button_login{
+  font-size: 1.5em;
+  margin-top: 20px;
+  padding: 0.5em 1em;
+  background-color: rgba(246, 171, 202);
+  color: inherit;
+  border-radius: 10px;
+}
+/*.message_error{
+  color: red;
+}*/
+
+/* FIN Styles del REGISTRO y LOGIN */
+
+/* INICIO PREGUNTAS FRECUENTES */
+.question-container{
+  background-color: white;
+  margin-top:25px;
+  margin-bottom: 25px;
+  overflow: hidden;
+  color: inherit;
+}
+.question-container i{
+  color: #c78283;
+}
+.question-container p, .question-container h3, .question-container h4{
+  padding: 0px 25px 0px;
+}
+.question-container h3{
+  color: #c78283;
+}
+.question-container h4{
+  color: dimgray;
+}
+
+.link-inicio p {
+  padding: 0px 25px 0px;
+  color: inherit;
+  font-size: 20px;
+}
+.link-inicio a {
+  text-decoration: none;
+  color: inherit;
+}
+.link-inicio a:hover {
+  text-decoration: none;
+  color: #c78283;
+}
+.sizes-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.sizes-container img {
+  max-width: 80%;
+}
+.pay-container {
+  display:flex;
+  justify-content: space-around;
+}
+.pay-container img{
+  max-width: 80px;
+  max-height: 80px;
+}
+.oca-container{
+  display:flex;
+  justify-content: space-around;
+}
+.oca-container img{
+  border-radius: 100px;
+  max-width: 100px;
+  max-height: 100px;
+}
+.envio-icon {
+  text-align: center;
+  color: none;
+  margin-top: 80px;
+  margin-bottom: 80px;
+  font-size: 1.5em;
+}
+.question-container a{
+  text-decoration: none;
+  font-weight: bold;
+  color: dimgray;
+}
+.question-container a:hover{
+  text-decoration: none;
+  font-weight: bold;
+  color: #c78283;
+}
+/* FIN PREGUNTAS FRECUENTES */
+
+/* INICIO Styles PERFIL */
+.p_list, .p_sublist {
+	list-style: none; /* elimina la viñeta */
+  margin: 0;
+}
+.p_list li{
+  margin-bottom: 7px;
+}
+.p_sublist li{
+  margin-bottom: 4px;
+}
+.p_sublist{
+  margin-top: 7px;
+}
+.profile_container{
+  background-color: white;
+  margin: 25px 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 10px 30px 50px 30px;
+}
+.info_profile_container{
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.edit_profile{
+  text-align: left;
+  color: dimgray;
+}
+.p_list a{
+  text-decoration: none;
+  color: dimgray;
+}
+.p_list a:hover, .edit_profile:hover{
+  color: #c78283;
+}
+.profile_title{
+  display: inline-flex;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+  align-items: center;
+  align-self: flex-start;
+}
+.profile_title h3{
+  margin-right: 1.5em;
+}
+.profile_img, .profile_info{
+  margin-left: 30px;
+}
+.profile_img{
+  position: relative;
+}
+.profile_container h3{
+  color: #c78283;
+}
+.profile_img img {
+  border-radius: 50%;
+  width: 20em;
+  height: 20em;
+}
+.profile_img a{
+  color: transparent;
+  text-decoration: none;
+  width: 100%;
+  padding: 0.5em;
+  text-align: center;
+  position: absolute;
+  background-color: transparent;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.profile_img a:hover{
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: background .2s linear;
+}
+.profile_info span{
+  font-weight: bold;
+}
+/* FIN Styles PERFIL */
+@media (min-width: 992px) {
+  /* INICIO Styles del HEADER */
+  .header_container {
+    flex-direction: row !important;
+  }
+
+  .header_nav ul {
+    flex-direction: row !important;
+  }
+  /* FIN Styles del Header */
+
+  /* INICIO Styles del REGISTRO y LOGIN */
+  .div_container{
+    display: inline-flex;
+    width: 100%;
+    justify-content: center;
+  }
+  .register_container, .login_container{
+    margin-left: none;
+    width: 40%;
+  }
+  .input_register, .input_login{
+    width: 100%;
+    height: 30px;
+    font-size: 1em;
+    padding: 1em 1em;
+  }
+  /* FIN Styles del REGISTRO y LOGIN */
+
+  /* INICIO Styles del PERFIL */
+  .info_profile_container{
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+  .profile_img{
+    align-self: flex-start;
+  }
+  /* FIN Styles del PERFIL */
+}
