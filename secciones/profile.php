@@ -9,7 +9,7 @@ if (!isLoged()) {
 
   $user = $_SESSION['userLoged'];
 
-var_dump($_COOKIE);
+//var_dump($_COOKIE);
 ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">

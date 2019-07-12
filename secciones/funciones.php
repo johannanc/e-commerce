@@ -3,7 +3,7 @@
 session_start();
 
 if (isset($_COOKIE['userEmail'])) {
-  $user = getByEmail($COOKIE['userEmail']);
+  $user = getByEmail($_COOKIE ['userEmail']);
   login($user);
 }
 
