@@ -34,12 +34,17 @@ $contrasenia = trim($_POST["password"]);
     $hayErrores = true;
   }
 
+  $login = [
+  "Email" => ["type" => "email", "placeholder" => "Ingrese su email", "value" => $email],
+  "Contraseña" => ["type" => "password", "placeholder" => "Ingrese su contraseña", "value" => ""]
+];
+
 }
 
 
 $login = [
-  "Email" => ["email", "Ingrese su email"],
-  "Contraseña" => ["password", "Ingrese su contraseña"]
+  "Email" => ["type" => "email", "placeholder" => "Ingrese su email", "value" => $email],
+  "Contraseña" => ["type" => "password", "placeholder" => "Ingrese su contraseña", "value" => ""]
 ];
 
 ?>
@@ -67,8 +72,8 @@ $login = [
         <form class="formulario_login" action="login.php" method="post">
           <!-- Datos de login -->
           <?php foreach ($login as $datos => $dato): ?>
-            <label class="label_login" for="<?= $dato[0] ?>"><?= $datos ?></label> <br>
-            <input class="input_login" id="<?= $dato[0] ?>" type="<?= $dato[0] ?>" name="<?= $dato[0] ?>" value="" placeholder="<?= $dato[1] ?>"> <br>
+            <label class="label_login" for="<?= $dato["type"] ?>"><?= $datos ?></label> <br>
+            <input class="input_login" id="<?= $dato["type"] ?>" type="<?= $dato["type"] ?>" name="<?= $dato["type"] ?>" value="<?= $dato["value"] ?>" placeholder="<?= $dato["placeholder"] ?>"> <br>
           <?php endforeach; ?>
           <span style="color: red;" ><?= $errorMessage ?></span> <br>
           <!-- Recordarme -->
