@@ -77,7 +77,7 @@ require_once("validacionFormulario.php");
               <label class="label_register" for="country">País de nacimiento</label><br>
               <select class="input_register" name="country" value="">
                 <?php foreach ($continentes as $continente => $paises):?>
-                  <optgroup label=<?= $continente ?>>
+                  <optgroup label=<?= $continente; ?>>
                     <?php foreach ($paises as $pais):?>
                       <option value=<?= $pais; ?>> <?= $pais; ?> </option>
                     <?php endforeach; ?>
